@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'list.dart';
+import 'right.dart';
 
 class Mini extends StatefulWidget {
   @override
@@ -73,6 +74,20 @@ class _MiniState extends State<Mini> {
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => SubList()));
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListTile(
+                  title: Text(
+                    "Copyright",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  trailing: Icon(Icons.arrow_forward),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Rights()));
                   },
                 ),
               ),
